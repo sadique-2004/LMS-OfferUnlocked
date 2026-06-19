@@ -1,29 +1,45 @@
 import React, { useState } from 'react';
 import { Mail, Lock, Eye, EyeOff, Loader2, ArrowRight } from 'lucide-react';
 
-export default function LoginForm() {
+export default function LoginForm({ onLogin }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!email || !password) return;
     
     setIsLoading(true);
+    setError('');
     
     // Simulate API authorization call
     setTimeout(() => {
       setIsLoading(false);
-      setIsSuccess(true);
       
-      // Reset success state after 2 seconds
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 2000);
-    }, 1500);
+      const normalizedEmail = email.trim().toLowerCase();
+      const normalizedPassword = password.trim();
+      
+      if (
+        (normalizedEmail === 'admin@offerunlocked.com' && normalizedPassword === 'admin123') ||
+        (normalizedEmail === 'student@offerunlocked.com' && normalizedPassword === 'student123')
+      ) {
+        setIsSuccess(true);
+        setTimeout(() => {
+          setIsSuccess(false);
+          onLogin({
+            email: normalizedEmail,
+            role: normalizedEmail.startsWith('admin') ? 'admin' : 'student',
+            name: normalizedEmail.startsWith('admin') ? 'Admin Panel' : 'Student Scholar'
+          });
+        }, 1000);
+      } else {
+        setError('Incorrect credentials. Hint: use admin@offerunlocked.com (admin123) or student@offerunlocked.com (student123)');
+      }
+    }, 1200);
   };
 
   return (
@@ -103,6 +119,11 @@ export default function LoginForm() {
 
         {/* Credentials Form */}
         <form onSubmit={handleSubmit} className="mt-6 space-y-5">
+          {error && (
+            <div className="p-3.5 rounded-xl bg-rose-50 border border-rose-100 text-xs font-semibold text-rose-600 leading-normal">
+              {error}
+            </div>
+          )}
           {/* Email input */}
           <div>
             <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
