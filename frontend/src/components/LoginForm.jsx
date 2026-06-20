@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Mail, Lock, Eye, EyeOff, Loader2, ArrowRight } from 'lucide-react';
 
 export default function LoginForm({ onLogin }) {
@@ -33,7 +33,7 @@ export default function LoginForm({ onLogin }) {
           onLogin({
             email: normalizedEmail,
             role: normalizedEmail.startsWith('admin') ? 'admin' : 'student',
-            name: normalizedEmail.startsWith('admin') ? 'Admin Panel' : 'Student Scholar'
+            name: normalizedEmail.startsWith('admin') ? 'Admin Panel' : 'Sadique'
           });
         }, 1000);
       } else {

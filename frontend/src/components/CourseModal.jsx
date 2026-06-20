@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { X, Save, Plus } from 'lucide-react';
 
 export default function CourseModal({ isOpen, onClose, onSave, course, darkMode }) {
@@ -9,6 +9,7 @@ export default function CourseModal({ isOpen, onClose, onSave, course, darkMode 
   const [error, setError] = useState('');
 
   useEffect(() => {
+    /* eslint-disable react-hooks/set-state-in-effect */
     if (course) {
       setTitle(course.title);
       setBanner(course.banner || '/assets/java.png');
@@ -21,6 +22,7 @@ export default function CourseModal({ isOpen, onClose, onSave, course, darkMode 
       setHours('');
     }
     setError('');
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, [course, isOpen]);
 
   if (!isOpen) return null;

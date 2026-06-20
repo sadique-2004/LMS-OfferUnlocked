@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Clock, BookOpen, Edit2, Trash2, ArrowUpRight } from 'lucide-react';
 
-export default function CourseCard({ course, isAdmin, onEdit, onDelete, darkMode }) {
+export default function CourseCard({ course, isAdmin, onEdit, onDelete, onStart, darkMode }) {
   const [imageError, setImageError] = useState(false);
 
   // Colors for gradients used in fallbacks if the image doesn't exist
@@ -91,9 +91,12 @@ export default function CourseCard({ course, isAdmin, onEdit, onDelete, darkMode
           }`}>
             Status: Enrolled
           </span>
-          <button className={`inline-flex items-center gap-1 text-xs font-bold transition-all cursor-pointer group/btn ${
-            darkMode ? 'text-indigo-400 hover:text-indigo-300' : 'text-indigo-600 hover:text-indigo-700'
-          }`}>
+          <button 
+            onClick={() => onStart && onStart(course)}
+            className={`inline-flex items-center gap-1 text-xs font-bold transition-all cursor-pointer group/btn ${
+              darkMode ? 'text-indigo-400 hover:text-indigo-300' : 'text-indigo-600 hover:text-indigo-700'
+            }`}
+          >
             Get Started
             <ArrowUpRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-200" />
           </button>

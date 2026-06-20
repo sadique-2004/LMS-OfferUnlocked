@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import BrandingSection from './components/BrandingSection';
 import LoginForm from './components/LoginForm';
@@ -8,21 +8,21 @@ import CourseModal from './components/CourseModal';
 const INITIAL_COURSES = [
   {
     id: 1,
-    title: 'Java Full Stack Masterclass',
+    title: 'Core Java Masterclass',
     banner: '/assets/java.png',
     modules: 16,
     hours: 48,
   },
   {
     id: 2,
-    title: 'React & Modern Frontend Engineering',
+    title: 'React & Modern Frontend',
     banner: '/assets/react.png',
     modules: 12,
     hours: 32,
   },
   {
     id: 3,
-    title: 'Data Structures & Algorithms (DSA)',
+    title: 'Data Structures & Algorithms',
     banner: '/assets/dsa.png',
     modules: 18,
     hours: 50,
@@ -123,6 +123,7 @@ function App() {
           onAddCourse={handleOpenAddModal}
           onEditCourse={handleOpenEditModal}
           onDeleteCourse={handleDeleteCourse}
+          onSaveCourse={handleSaveCourse}
           onLogout={handleLogout}
           darkMode={darkMode}
           onToggleDarkMode={() => setDarkMode(!darkMode)}
