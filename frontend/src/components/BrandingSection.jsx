@@ -8,23 +8,15 @@ export default function BrandingSection() {
       <div className="absolute bottom-[-10%] right-[-10%] w-[400px] h-[400px] rounded-full bg-violet-500/10 blur-[100px] animate-pulse-glow" style={{ animationDelay: '2s' }} />
 
       {/* Header / Logo */}
-      <div className="relative z-10 flex items-center gap-3.5">
-        <img src="/logo.png" alt="Offer Unlocked Logo" className="w-10 h-10 object-contain rounded-xl shadow-lg shadow-indigo-500/5" />
-        <div className="flex flex-col justify-center">
-          <span className="text-xl font-bold tracking-tight text-white font-sans leading-none">
-            Offer<span className="text-indigo-400">Unlocked</span>
-          </span>
-          <span className="text-[10px] font-medium tracking-wider text-slate-400 uppercase mt-1">
-            Learning Management System
-          </span>
-        </div>
+      <div className="relative z-10 flex items-center">
+        <img src="/logo.png" alt="Offer Unlocked Logo" className="h-10 w-auto object-contain" />
       </div>
 
       {/* Main Copy (Centered vertically between header and footer) */}
       <div className="relative z-10 flex-1 flex flex-col justify-center max-w-lg text-left">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-slate-900/80 border border-slate-800 text-indigo-300 mb-6 backdrop-blur-md self-start">
           <Star className="w-3.5 h-3.5 fill-indigo-400 text-indigo-400" />
-          <span>Premium Learning Environment</span>
+          <span>Premium LMS Platform</span>
         </div>
         
         <h1 className="text-4xl xl:text-5xl font-black text-white leading-tight tracking-tight">

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Lock, Eye, EyeOff, Loader2, ArrowRight } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff, Loader2, ArrowRight, Sparkles } from 'lucide-react';
 
 export default function LoginForm({ onLogin }) {
   const [email, setEmail] = useState('');
@@ -8,38 +8,16 @@ export default function LoginForm({ onLogin }) {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState('');
+  const [showDevPopup, setShowDevPopup] = useState(false);
+
+  const triggerDevPopup = (e) => {
+    if (e) e.preventDefault();
+    setShowDevPopup(true);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!email || !password) return;
-    
-    setIsLoading(true);
-    setError('');
-    
-    // Simulate API authorization call
-    setTimeout(() => {
-      setIsLoading(false);
-      
-      const normalizedEmail = email.trim().toLowerCase();
-      const normalizedPassword = password.trim();
-      
-      if (
-        (normalizedEmail === 'admin@offerunlocked.com' && normalizedPassword === 'admin123') ||
-        (normalizedEmail === 'student@offerunlocked.com' && normalizedPassword === 'student123')
-      ) {
-        setIsSuccess(true);
-        setTimeout(() => {
-          setIsSuccess(false);
-          onLogin({
-            email: normalizedEmail,
-            role: normalizedEmail.startsWith('admin') ? 'admin' : 'student',
-            name: normalizedEmail.startsWith('admin') ? 'Admin Panel' : 'Sadique'
-          });
-        }, 1000);
-      } else {
-        setError('Incorrect credentials. Hint: use admin@offerunlocked.com (admin123) or student@offerunlocked.com (student123)');
-      }
-    }, 1200);
+    setShowDevPopup(true);
   };
 
   return (
@@ -47,16 +25,8 @@ export default function LoginForm({ onLogin }) {
       <div className="mx-auto w-full max-w-md">
         
         {/* Mobile Header (Only visible on mobile/tablet) */}
-        <div className="flex lg:hidden items-center gap-3.5 mb-8">
-          <img src="/logo.png" alt="Offer Unlocked Logo" className="w-8 h-8 object-contain rounded-lg" />
-          <div className="flex flex-col justify-center">
-            <span className="text-base font-bold tracking-tight text-slate-950 font-sans leading-none">
-              Offer<span className="text-indigo-600">Unlocked</span>
-            </span>
-            <span className="text-[8px] font-medium tracking-wider text-slate-500 uppercase mt-0.5">
-              Learning Management System
-            </span>
-          </div>
+        <div className="flex lg:hidden items-center mb-8">
+          <img src="/logo.png" alt="Offer Unlocked Logo" className="h-8 w-auto object-contain" />
         </div>
 
         {/* Title / Subtitle */}
@@ -73,6 +43,7 @@ export default function LoginForm({ onLogin }) {
         <div className="mt-8 grid grid-cols-2 gap-3">
           <button
             type="button"
+            onClick={triggerDevPopup}
             className="flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-xl border border-slate-200 text-sm font-semibold text-slate-700 bg-white hover:bg-slate-50 hover:border-slate-300 active:bg-slate-100 transition-all duration-200 cursor-pointer shadow-xs"
           >
             <svg className="w-4 h-4" viewBox="0 0 24 24">
@@ -98,6 +69,7 @@ export default function LoginForm({ onLogin }) {
 
           <button
             type="button"
+            onClick={triggerDevPopup}
             className="flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-xl border border-slate-200 text-sm font-semibold text-slate-700 bg-white hover:bg-slate-50 hover:border-slate-300 active:bg-slate-100 transition-all duration-200 cursor-pointer shadow-xs"
           >
             <svg className="w-4 h-4 fill-slate-900" viewBox="0 0 24 24">
@@ -152,7 +124,11 @@ export default function LoginForm({ onLogin }) {
               <label htmlFor="password" className="block text-xs font-bold uppercase tracking-wider text-slate-500">
                 Password
               </label>
-              <a href="#" className="text-xs font-bold text-indigo-600 hover:text-indigo-700 transition-colors">
+              <a 
+                href="#" 
+                onClick={triggerDevPopup}
+                className="text-xs font-bold text-indigo-600 hover:text-indigo-700 transition-colors"
+              >
                 Forgot password?
               </a>
             </div>
@@ -222,11 +198,44 @@ export default function LoginForm({ onLogin }) {
         {/* Footer info */}
         <p className="mt-8 text-center text-xs text-slate-400">
           Not enrolled yet?{' '}
-          <a href="#" className="font-bold text-indigo-600 hover:text-indigo-700 transition-colors">
+          <a 
+            href="#" 
+            onClick={triggerDevPopup}
+            className="font-bold text-indigo-600 hover:text-indigo-700 transition-colors"
+          >
             Request portal access
           </a>
         </p>
       </div>
+
+      {/* Under Development Modal */}
+      {showDevPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-md animate-fade-in">
+          <div className="relative w-full max-w-md bg-white rounded-2xl border border-slate-100 p-8 text-center shadow-2xl animate-scale-up">
+            {/* Favicon Logo Header */}
+            <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-slate-50 border border-slate-100 shadow-xs mb-6">
+              <img src="/favicon.png" alt="Offer Unlocked Icon" className="h-10 w-10 object-contain rounded-lg" />
+            </div>
+
+            <h3 className="text-xl font-bold tracking-tight text-slate-950 mb-3">
+              Under Development
+            </h3>
+            
+            <p className="text-sm text-slate-500 mb-8 leading-relaxed">
+              Thank you so much for your interest and choosing to leverage our platform! We are currently putting the final touches on our engineering and design learning ecosystem. 
+              We are under active development right now, and very soon you will be able to experience the platform in its full capability. We truly appreciate your support!
+            </p>
+
+            <button
+              type="button"
+              onClick={() => setShowDevPopup(false)}
+              className="w-full py-3.5 px-4 rounded-xl text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 active:scale-[0.99] transition-all duration-200 shadow-md shadow-indigo-600/20 hover:shadow-indigo-600/30 cursor-pointer"
+            >
+              Got it, thank you!
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

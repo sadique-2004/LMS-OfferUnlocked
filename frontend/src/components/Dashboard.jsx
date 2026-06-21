@@ -120,20 +120,8 @@ export default function Dashboard({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between gap-4">
           
           {/* Logo Brand */}
-          <div className="flex items-center gap-3 shrink-0">
-            <img src="/logo.png" alt="Offer Unlocked Logo" className="w-9 h-9 object-contain rounded-xl" />
-            <div className="flex flex-col text-left hidden sm:flex">
-              <span className={`text-base font-bold tracking-tight leading-none ${
-                darkMode ? 'text-white' : 'text-slate-900'
-              }`}>
-                Offer<span className="text-indigo-500">Unlocked</span>
-              </span>
-              <span className={`text-[8px] font-medium tracking-wider uppercase mt-0.5 ${
-                darkMode ? 'text-slate-500' : 'text-slate-400'
-              }`}>
-                Learning Management System
-              </span>
-            </div>
+          <div className="flex items-center shrink-0">
+            <img src="/logo.png" alt="Offer Unlocked Logo" className="h-8 w-auto object-contain" />
           </div>
 
           {/* Sticky Search Input Bar in Navigation */}
