@@ -208,20 +208,19 @@ export default function Dashboard({
         </header>
       )}
 
-      {/* Main Dashboard Space - Padded top to clear fixed header */}
-      <main className={`flex-1 w-full max-w-7xl mx-auto px-6 pb-8 ${activeCourseWorkspace ? 'pt-8' : 'pt-[92px]'}`}>
-        {activeCourseWorkspace ? (
-          <CourseWorkspace
-            course={activeCourseWorkspace}
-            user={user}
-            onSaveCourse={(updatedCourse) => {
-              onSaveCourse(updatedCourse);
-              setActiveCourseWorkspace(updatedCourse);
-            }}
-            onBack={() => setActiveCourseWorkspace(null)}
-            darkMode={darkMode}
-          />
-        ) : (
+      {activeCourseWorkspace ? (
+        <CourseWorkspace
+          course={activeCourseWorkspace}
+          user={user}
+          onSaveCourse={(updatedCourse) => {
+            onSaveCourse(updatedCourse);
+            setActiveCourseWorkspace(updatedCourse);
+          }}
+          onBack={() => setActiveCourseWorkspace(null)}
+          darkMode={darkMode}
+        />
+      ) : (
+        <main className="flex-1 w-full max-w-7xl mx-auto px-6 pb-8 pt-[92px]">
           <>
             {/* Personalized Welcome Greeting Banner */}
             <div className={`p-6 sm:p-8 rounded-3xl border mb-8 relative overflow-hidden transition-all duration-300 text-left ${
@@ -627,8 +626,8 @@ export default function Dashboard({
               </div>
             )}
           </>
-        )}
-      </main>
+        </main>
+      )}
     </div>
   );
 }

@@ -20,7 +20,7 @@ export default function BrandingSection() {
         </div>
         
         <h1 className="text-4xl xl:text-5xl font-black text-white leading-tight tracking-tight">
-          Build proof of work.<br />
+          Learn technology.<br />
           Get <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-violet-400 to-amber-300">unlocked</span>.
         </h1>
         

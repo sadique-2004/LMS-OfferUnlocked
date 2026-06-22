@@ -10,9 +10,10 @@ import {
   Clock, 
   BookOpen, 
   X,
-  FileText,
   Video,
-  Award
+  Award,
+  ChevronsLeft,
+  ChevronsRight
 } from 'lucide-react';
 
 const generateDefaultCurriculum = (courseTitle) => {
@@ -25,54 +26,54 @@ const generateDefaultCurriculum = (courseTitle) => {
         id: 'java-mod-1',
         title: 'Module 1: Basics of Java',
         lessons: [
-          { id: 'java-les-1-1', title: '01. Java Introduction & JVM Architecture', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '15:20' },
-          { id: 'java-les-1-2', title: '02. Data Types, Variables & Operators', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '18:45' },
-          { id: 'java-les-1-3', title: '03. Conditional Statements & Control Flow', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '20:10' }
+          { id: 'java-les-1-1', title: '01. Java Introduction & JVM Architecture', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '15:20' },
+          { id: 'java-les-1-2', title: '02. Data Types, Variables & Operators', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '18:45' },
+          { id: 'java-les-1-3', title: '03. Conditional Statements & Control Flow', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '20:10' }
         ]
       },
       {
         id: 'java-mod-2',
         title: 'Module 2: Java Essentials',
         lessons: [
-          { id: 'java-les-2-1', title: '04. Working with Arrays & Loops', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '22:15' },
-          { id: 'java-les-2-2', title: '05. Creating & Calling Java Methods', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '14:30' },
-          { id: 'java-les-2-3', title: '06. String Manipulation & String Pool', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '25:05' }
+          { id: 'java-les-2-1', title: '04. Working with Arrays & Loops', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '22:15' },
+          { id: 'java-les-2-2', title: '05. Creating & Calling Java Methods', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '14:30' },
+          { id: 'java-les-2-3', title: '06. String Manipulation & String Pool', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '25:05' }
         ]
       },
       {
         id: 'java-mod-3',
         title: 'Module 3: Object-Oriented Programming (OOPs)',
         lessons: [
-          { id: 'java-les-3-1', title: '07. OOPs Core Concepts: Classes & Objects', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '19:50' },
-          { id: 'java-les-3-2', title: '08. The 4 Pillars: Encapsulation (Access Modifiers)', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '16:15' },
-          { id: 'java-les-3-3', title: '09. The 4 Pillars: Inheritance (extends keyword)', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '18:40' },
-          { id: 'java-les-3-4', title: '10. The 4 Pillars: Polymorphism (Overloading & Overriding)', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '21:30' },
-          { id: 'java-les-3-5', title: '11. The 4 Pillars: Abstraction (Abstract Classes & Interfaces)', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '24:10' }
+          { id: 'java-les-3-1', title: '07. OOPs Core Concepts: Classes & Objects', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '19:50' },
+          { id: 'java-les-3-2', title: '08. The 4 Pillars: Encapsulation (Access Modifiers)', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '16:15' },
+          { id: 'java-les-3-3', title: '09. The 4 Pillars: Inheritance (extends keyword)', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '18:40' },
+          { id: 'java-les-3-4', title: '10. The 4 Pillars: Polymorphism (Overloading & Overriding)', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '21:30' },
+          { id: 'java-les-3-5', title: '11. The 4 Pillars: Abstraction (Abstract Classes & Interfaces)', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '24:10' }
         ]
       },
       {
         id: 'java-mod-4',
         title: 'Module 4: Exception Handling',
         lessons: [
-          { id: 'java-les-4-1', title: '12. Intro to Exceptions (Try-Catch blocks)', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '15:45' },
-          { id: 'java-les-4-2', title: '13. Throw, Throws & Custom Exceptions', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '17:20' }
+          { id: 'java-les-4-1', title: '12. Intro to Exceptions (Try-Catch blocks)', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '15:45' },
+          { id: 'java-les-4-2', title: '13. Throw, Throws & Custom Exceptions', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '17:20' }
         ]
       },
       {
         id: 'java-mod-5',
         title: 'Module 5: Multithreading',
         lessons: [
-          { id: 'java-les-5-1', title: '14. Creating Threads (Thread class & Runnable)', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '22:30' },
-          { id: 'java-les-5-2', title: '15. Thread Synchronization & Inter-thread Communication', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '28:15' }
+          { id: 'java-les-5-1', title: '14. Creating Threads (Thread class & Runnable)', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '22:30' },
+          { id: 'java-les-5-2', title: '15. Thread Synchronization & Inter-thread Communication', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '28:15' }
         ]
       },
       {
         id: 'java-mod-6',
         title: 'Module 6: Java Collections Framework',
         lessons: [
-          { id: 'java-les-6-1', title: '16. List Interface (ArrayList vs LinkedList)', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '24:50' },
-          { id: 'java-les-6-2', title: '17. Set Interface (HashSet vs TreeSet)', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '19:15' },
-          { id: 'java-les-6-3', title: '18. Map Interface (HashMap vs TreeMap)', videoUrl: 'https://youtu.be/hEcjq9LVXL0', duration: '26:40' }
+          { id: 'java-les-6-1', title: '16. List Interface (ArrayList vs LinkedList)', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '24:50' },
+          { id: 'java-les-6-2', title: '17. Set Interface (HashSet vs TreeSet)', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '19:15' },
+          { id: 'java-les-6-3', title: '18. Map Interface (HashMap vs TreeMap)', videoUrl: 'https://youtu.be/rpM98NCecJQ', duration: '26:40' }
         ]
       }
     ];
@@ -102,19 +103,19 @@ const generateDefaultCurriculum = (courseTitle) => {
         {
           id: 'les-1-1',
           title: `01. Introduction to ${topic} & Setup`,
-          videoUrl: 'https://youtu.be/hEcjq9LVXL0',
+          videoUrl: 'https://youtu.be/rpM98NCecJQ',
           duration: '12:45'
         },
         {
           id: 'les-1-2',
           title: `02. Setting up Environment & Workspace`,
-          videoUrl: 'https://youtu.be/hEcjq9LVXL0',
+          videoUrl: 'https://youtu.be/rpM98NCecJQ',
           duration: '18:20'
         },
         {
           id: 'les-1-3',
           title: `03. Understanding Basic Anatomy & Hello World`,
-          videoUrl: 'https://youtu.be/hEcjq9LVXL0',
+          videoUrl: 'https://youtu.be/rpM98NCecJQ',
           duration: '22:15'
         }
       ]
@@ -126,19 +127,19 @@ const generateDefaultCurriculum = (courseTitle) => {
         {
           id: 'les-2-1',
           title: `04. Deep Dive into Variables, Types & State`,
-          videoUrl: 'https://youtu.be/hEcjq9LVXL0',
+          videoUrl: 'https://youtu.be/rpM98NCecJQ',
           duration: '25:40'
         },
         {
           id: 'les-2-2',
           title: `05. Control Flows, Loops & Operations`,
-          videoUrl: 'https://youtu.be/hEcjq9LVXL0',
+          videoUrl: 'https://youtu.be/rpM98NCecJQ',
           duration: '30:10'
         },
         {
           id: 'les-2-3',
           title: `06. Building Scalable Architecture for ${topic}`,
-          videoUrl: 'https://youtu.be/hEcjq9LVXL0',
+          videoUrl: 'https://youtu.be/rpM98NCecJQ',
           duration: '19:55'
         }
       ]
@@ -150,19 +151,19 @@ const generateDefaultCurriculum = (courseTitle) => {
         {
           id: 'les-3-1',
           title: `07. Error Handling & Debugging Techniques`,
-          videoUrl: 'https://youtu.be/hEcjq9LVXL0',
+          videoUrl: 'https://youtu.be/rpM98NCecJQ',
           duration: '14:30'
         },
         {
           id: 'les-3-2',
           title: `08. Performance Benchmarking & Optimization`,
-          videoUrl: 'https://youtu.be/hEcjq9LVXL0',
+          videoUrl: 'https://youtu.be/rpM98NCecJQ',
           duration: '28:15'
         },
         {
           id: 'les-3-3',
           title: `09. Best Practices, Security & Cloud Deployment`,
-          videoUrl: 'https://youtu.be/hEcjq9LVXL0',
+          videoUrl: 'https://youtu.be/rpM98NCecJQ',
           duration: '21:05'
         }
       ]
@@ -170,9 +171,8 @@ const generateDefaultCurriculum = (courseTitle) => {
   ];
 };
 
-
 const getEmbedUrl = (url) => {
-  if (!url) return 'https://www.youtube.com/embed/hEcjq9LVXL0';
+  if (!url) return 'https://www.youtube.com/embed/rpM98NCecJQ';
   
   let videoId;
   try {
@@ -184,17 +184,20 @@ const getEmbedUrl = (url) => {
       if (url.trim().length === 11) {
         videoId = url.trim();
       } else {
-        videoId = 'hEcjq9LVXL0';
+        videoId = 'rpM98NCecJQ';
       }
     }
   } catch {
-    videoId = 'hEcjq9LVXL0';
+    videoId = 'rpM98NCecJQ';
   }
   return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
 };
 
 export default function CourseWorkspace({ course, user, onSaveCourse, onBack, darkMode }) {
   const isAdmin = user.role === 'admin';
+
+  // Sidebar collapsible state
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
 
   // Initialize curriculum
   const [curriculum, setCurriculum] = useState(() => {
@@ -236,19 +239,6 @@ export default function CourseWorkspace({ course, user, onSaveCourse, onBack, da
     }
   });
 
-  // Tab state for the details panel under the video
-  const [activeTab, setActiveTab] = useState('notes');
-
-  // Notebook content state
-  const [notesText, setNotesText] = useState(() => {
-    try {
-      const saved = localStorage.getItem(`offerunlocked_notes_${user.email}_${course.id}`);
-      return saved || '';
-    } catch {
-      return '';
-    }
-  });
-
   // Form states for adding lessons
   const [addingLessonToModuleId, setAddingLessonToModuleId] = useState(null);
   const [newLessonTitle, setNewLessonTitle] = useState('');
@@ -258,17 +248,6 @@ export default function CourseWorkspace({ course, user, onSaveCourse, onBack, da
   // Form states for adding modules
   const [isAddingModule, setIsAddingModule] = useState(false);
   const [newModuleTitle, setNewModuleTitle] = useState('');
-
-  // Auto-save notebook text
-  const handleNotesChange = (e) => {
-    const val = e.target.value;
-    setNotesText(val);
-    try {
-      localStorage.setItem(`offerunlocked_notes_${user.email}_${course.id}`, val);
-    } catch (err) {
-      console.error(err);
-    }
-  };
 
   // Sync curriculum changes back to the parent state
   const saveCurriculum = (newCurriculum) => {
@@ -314,7 +293,7 @@ export default function CourseWorkspace({ course, user, onSaveCourse, onBack, da
     e.preventDefault();
     if (!newLessonTitle.trim()) return;
 
-    const url = newLessonUrl.trim() || 'https://youtu.be/hEcjq9LVXL0';
+    const url = newLessonUrl.trim() || 'https://youtu.be/rpM98NCecJQ';
     const duration = newLessonDuration.trim() || '15:00';
 
     const newLesson = {
@@ -427,269 +406,101 @@ export default function CourseWorkspace({ course, user, onSaveCourse, onBack, da
   const totalCount = allLessons.length;
   const progressPercent = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
 
+  // Previous & Next navigation controls
+  const activeIdx = allLessons.findIndex(l => l.id === activeLesson?.id);
+  const prevLesson = activeIdx > 0 ? allLessons[activeIdx - 1] : null;
+  const nextLesson = activeIdx >= 0 && activeIdx < allLessons.length - 1 ? allLessons[activeIdx + 1] : null;
+
+  const handlePrevLesson = () => {
+    if (prevLesson) {
+      setActiveLesson(prevLesson);
+      const parentMod = curriculum.find(mod => mod.lessons.some(l => l.id === prevLesson.id));
+      if (parentMod) {
+        setExpandedModules(prev => ({ ...prev, [parentMod.id]: true }));
+      }
+    }
+  };
+
+  const handleNextLesson = () => {
+    if (nextLesson) {
+      setActiveLesson(nextLesson);
+      const parentMod = curriculum.find(mod => mod.lessons.some(l => l.id === nextLesson.id));
+      if (parentMod) {
+        setExpandedModules(prev => ({ ...prev, [parentMod.id]: true }));
+      }
+    }
+  };
+
   return (
-    <div className="w-full flex flex-col gap-6 text-left animate-fade-in">
+    <div className={`h-screen w-screen flex overflow-hidden select-none transition-colors duration-305 ${
+      darkMode ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
+    }`}>
       
-      {/* Workspace Header Top Navigation bar */}
-      <div className={`p-4 sm:p-5 rounded-2xl border flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all duration-300 ${
-        darkMode 
-          ? 'bg-slate-900/40 border-slate-800/80 shadow-md shadow-indigo-950/5' 
-          : 'bg-white border-slate-100 shadow-xs'
-      }`}>
-        <div className="flex items-center gap-3.5">
-          <button
-            onClick={onBack}
-            className={`p-2.5 rounded-xl border flex items-center justify-center transition-all cursor-pointer shrink-0 ${
-              darkMode
-                ? 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white hover:bg-slate-850'
-                : 'bg-white border-slate-200 text-slate-650 hover:text-indigo-650 hover:bg-slate-50'
-            }`}
-            title="Return to Catalog"
-          >
-            <ArrowLeft className="w-4 h-4" />
-          </button>
-
-          <div>
-            <div className="flex items-center gap-2">
-              <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider ${
-                darkMode ? 'bg-indigo-500/10 text-indigo-400' : 'bg-indigo-50 text-indigo-600'
-              }`}>
-                <BookOpen className="w-3 h-3" /> Learning Console
-              </span>
-              <span className="text-[10px] text-slate-500 font-bold">•</span>
-              <span className={`text-[10px] font-black uppercase tracking-wider ${
-                darkMode ? 'text-indigo-400/90' : 'text-indigo-600/90'
-              }`}>
-                {course.title}
-              </span>
-            </div>
-            <h2 className={`text-base sm:text-lg font-black tracking-tight leading-tight mt-1 ${
-              darkMode ? 'text-white' : 'text-slate-900'
-            }`}>
-              {activeLesson ? activeLesson.title : 'Ready to start learning'}
-            </h2>
+      {/* Collapsible Left Sidebar */}
+      <div className={`h-full flex flex-col border-r transition-all duration-300 shrink-0 ${
+        isSidebarCollapsed ? 'w-0 border-r-0' : 'w-80 md:w-[320px]'
+      } ${
+        darkMode ? 'border-slate-800 bg-slate-900' : 'border-slate-200 bg-white'
+      } overflow-hidden`}>
+        
+        {/* Sidebar Header */}
+        <div className="p-4 bg-slate-900 text-white shrink-0">
+          <div className="flex items-center justify-between gap-4 text-xs font-semibold text-slate-400">
+            <button
+              onClick={onBack}
+              className="flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" /> Back to course page
+            </button>
+            <button
+              onClick={() => setIsSidebarCollapsed(true)}
+              className="p-1 rounded hover:bg-slate-800 text-slate-400 hover:text-white transition-colors cursor-pointer"
+              title="Collapse Sidebar"
+            >
+              <ChevronsLeft className="w-4 h-4" />
+            </button>
           </div>
-        </div>
 
-        {/* Progress Tracker Widget */}
-        <div className="flex items-center gap-4 shrink-0 sm:w-72">
-          <div className="flex-1">
-            <div className="flex items-center justify-between text-[10px] font-extrabold uppercase tracking-wider mb-1.5 text-slate-400">
-              <span>Syllabus Completed</span>
-              <span className={progressPercent === 100 ? 'text-emerald-500' : 'text-indigo-400'}>
-                {completedCount}/{totalCount} ({progressPercent}%)
-              </span>
-            </div>
-            <div className={`w-full rounded-full h-1.5 overflow-hidden ${darkMode ? 'bg-slate-800' : 'bg-slate-200'}`}>
+          <h2 className="text-lg font-black tracking-tight text-white mt-4 text-left leading-snug">
+            {course.title}
+          </h2>
+
+          {/* Progress Section */}
+          <div className="flex items-center gap-3 mt-4 text-[10px] font-extrabold uppercase tracking-wider text-slate-400">
+            <div className="flex-1 bg-slate-800 rounded-full h-1 overflow-hidden">
               <div 
-                className={`h-1.5 rounded-full transition-all duration-500 ${
-                  progressPercent === 100 ? 'bg-emerald-500' : 'bg-indigo-500'
-                }`}
+                className="h-1 bg-indigo-500 rounded-full transition-all duration-500"
                 style={{ width: `${progressPercent}%` }}
               />
             </div>
-          </div>
-          {progressPercent === 100 && (
-            <div className="p-2 rounded-xl bg-emerald-500/10 text-emerald-400 shrink-0 animate-bounce">
-              <Award className="w-5 h-5" />
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Main Content Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-        
-        {/* Left Side: Video Player, Notes, Perks (Sticky and Fixed on Desktop) */}
-        <div className="lg:col-span-2 lg:sticky lg:top-[92px] space-y-5">
-          
-          {/* Iframe Video Embed */}
-          <div className={`relative aspect-video w-full rounded-2xl overflow-hidden border bg-slate-950 shadow-2xl transition-all duration-300 ${
-            darkMode ? 'border-slate-800/80 shadow-indigo-950/10' : 'border-slate-200 shadow-slate-200/50'
-          }`}>
-            {activeLesson ? (
-              <iframe
-                src={getEmbedUrl(activeLesson.videoUrl)}
-                title={activeLesson.title}
-                className="absolute inset-0 w-full h-full border-0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-            ) : (
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-slate-900/60">
-                <Video className="w-12 h-12 text-slate-500 mb-3 animate-pulse" />
-                <h3 className="text-sm font-bold">No lesson selected</h3>
-                <p className="text-xs text-slate-500 mt-1 max-w-xs">
-                  Select a lesson from the syllabus outline on the right to start watching.
-                </p>
-              </div>
-            )}
-          </div>
-
-          {/* Interactive Navigation Tabs */}
-          <div className="w-full">
-            <div className="flex border-b border-slate-200 dark:border-slate-800/80 mb-5 overflow-x-auto">
-              <button
-                onClick={() => setActiveTab('notes')}
-                className={`px-4 py-2.5 text-xs font-black uppercase tracking-wider border-b-2 transition-all cursor-pointer whitespace-nowrap ${
-                  activeTab === 'notes'
-                    ? 'border-indigo-500 text-indigo-400'
-                    : 'border-transparent text-slate-450 hover:text-slate-200'
-                }`}
-              >
-                Key Takeaways
-              </button>
-              <button
-                onClick={() => setActiveTab('workspace_notes')}
-                className={`px-4 py-2.5 text-xs font-black uppercase tracking-wider border-b-2 transition-all cursor-pointer whitespace-nowrap ${
-                  activeTab === 'workspace_notes'
-                    ? 'border-indigo-500 text-indigo-400'
-                    : 'border-transparent text-slate-450 hover:text-slate-200'
-                }`}
-              >
-                My Study Notes
-              </button>
-              <button
-                onClick={() => setActiveTab('perks')}
-                className={`px-4 py-2.5 text-xs font-black uppercase tracking-wider border-b-2 transition-all cursor-pointer whitespace-nowrap ${
-                  activeTab === 'perks'
-                    ? 'border-indigo-500 text-indigo-400'
-                    : 'border-transparent text-slate-450 hover:text-slate-200'
-                }`}
-              >
-                SaaS Perks
-              </button>
-            </div>
-
-            {/* Tab Panels */}
-            {activeTab === 'notes' && (
-              <div className={`p-5 rounded-2xl border text-left transition-all ${
-                darkMode ? 'bg-slate-900/40 border-slate-800/80' : 'bg-white border-slate-100'
-              }`}>
-                <h4 className="text-sm font-bold flex items-center gap-2 mb-3">
-                  <FileText className="w-4 h-4 text-indigo-405" /> Key Study Concepts
-                </h4>
-                <p className={`text-xs leading-relaxed mb-4 ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
-                  In this lesson, we break down core aspects of {course.title}. Follow along with the instructor, reproduce the code syntax on your workspace, and write notes to build concrete practical experiences.
-                </p>
-                <div className="space-y-2 text-xs">
-                  <div className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-1.5 shrink-0" />
-                    <span className={darkMode ? 'text-slate-300' : 'text-slate-650'}>
-                      Configure development workspace and check output log statements.
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-1.5 shrink-0" />
-                    <span className={darkMode ? 'text-slate-300' : 'text-slate-650'}>
-                      Analyze computational structures and state definitions for production optimization.
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-1.5 shrink-0" />
-                    <span className={darkMode ? 'text-slate-300' : 'text-slate-650'}>
-                      Deploy changes locally and review integration hooks/modules.
-                    </span>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {activeTab === 'workspace_notes' && (
-              <div className={`p-5 rounded-2xl border text-left transition-all ${
-                darkMode ? 'bg-slate-900/40 border-slate-800/80' : 'bg-white border-slate-100'
-              }`}>
-                <h4 className="text-sm font-bold flex items-center gap-2 mb-2">
-                  <FileText className="w-4 h-4 text-indigo-405" /> Personal Scratchpad
-                </h4>
-                <p className={`text-[10px] uppercase font-bold tracking-wider mb-3.5 ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>
-                  Write notes or paste code snippets here. Auto-saves as you type.
-                </p>
-                <textarea
-                  value={notesText}
-                  onChange={handleNotesChange}
-                  rows={6}
-                  placeholder="Paste syntax or write quick takeaways here..."
-                  className={`w-full p-4 rounded-xl border text-xs font-semibold focus:outline-none focus:ring-2 transition-all ${
-                    darkMode
-                      ? 'bg-slate-950 border-slate-800 text-slate-100 placeholder-slate-600 focus:ring-indigo-500/30'
-                      : 'bg-white border-slate-200 text-slate-800 placeholder-slate-400 focus:ring-indigo-500/20'
-                  }`}
-                />
-              </div>
-            )}
-
-            {activeTab === 'perks' && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  { title: "Lifetime Access", desc: "Enjoy perpetual access to this track and updates." },
-                  { title: "Unlimited syllabus unlocks", desc: "Gain access to all modules without barriers." },
-                  { title: "Priority resume reviews", desc: "Get direct resume reviews from industry alumni." },
-                  { title: "1-on-1 Alumni mock prep", desc: "Access live mock practice panels in your dashboard." }
-                ].map((perk, index) => (
-                  <div key={index} className={`p-4 rounded-xl border text-left flex items-start gap-3 transition-colors ${
-                    darkMode ? 'bg-slate-900/40 border-slate-800/80' : 'bg-white border-slate-100'
-                  }`}>
-                    <div className="p-2 rounded-lg bg-indigo-500/10 text-indigo-405 shrink-0">
-                      <CheckCircle className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <h5 className="text-xs font-bold">{perk.title}</h5>
-                      <p className={`text-[10px] mt-1 ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>{perk.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
+            <span className="shrink-0">{progressPercent}%</span>
           </div>
         </div>
 
-        {/* Right Side: Scrollable Accordion Module Outline */}
-        <div className="lg:col-span-1 h-full lg:max-h-[calc(100vh-135px)] lg:overflow-y-auto pr-1">
-          <div className="flex items-center justify-between mb-4.5">
-            <h3 className={`text-xs font-black uppercase tracking-wider ${
-              darkMode ? 'text-slate-400' : 'text-slate-550'
-            }`}>
-              Course Curriculum
-            </h3>
-            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">
-              {curriculum.length} Modules
-            </span>
-          </div>
-
-          <div className="space-y-4">
+        {/* Sidebar Body - Accordion Modules list */}
+        <div className={`flex-1 overflow-y-auto ${
+          darkMode ? 'bg-slate-955 text-slate-200' : 'bg-white text-slate-800'
+        }`}>
+          <div className="divide-y divide-slate-200 dark:divide-slate-800">
             {curriculum.map((mod, modIdx) => {
               const isExpanded = !!expandedModules[mod.id];
               return (
-                <div 
-                  key={mod.id} 
-                  className={`rounded-2xl border overflow-hidden transition-all duration-300 ${
-                    darkMode 
-                      ? 'bg-slate-900/30 border-slate-800/80 hover:border-slate-700/80' 
-                      : 'bg-white border-slate-100 hover:border-slate-200'
-                  }`}
-                >
+                <div key={mod.id} className="transition-all duration-200">
                   {/* Accordion Header */}
                   <div 
                     onClick={() => toggleModule(mod.id)}
-                    className={`p-4 flex items-center justify-between gap-3 cursor-pointer select-none ${
-                      darkMode ? 'hover:bg-slate-900/60' : 'hover:bg-slate-50'
+                    className={`py-3 px-4 flex items-center justify-between gap-3 cursor-pointer select-none transition-colors duration-150 ${
+                      isExpanded 
+                        ? darkMode ? 'bg-slate-900/60' : 'bg-slate-50' 
+                        : darkMode ? 'hover:bg-slate-900/40' : 'hover:bg-slate-50/50'
                     }`}
                   >
-                    <div className="flex-1 text-left">
-                      <h3 className="text-[9px] font-black uppercase tracking-wider text-indigo-400 mb-0.5">
-                        Module {modIdx + 1}
-                      </h3>
-                      <h4 className={`text-xs sm:text-sm font-bold tracking-tight ${darkMode ? 'text-white' : 'text-slate-900'}`}>
-                        {mod.title.replace(/^Module \d+:\s*/, '')}
+                    <div className="flex-1 text-left min-w-0">
+                      <h4 className={`text-xs font-bold tracking-tight leading-snug truncate ${
+                        darkMode ? 'text-slate-200' : 'text-slate-700'
+                      }`}>
+                        {modIdx + 1}. {mod.title.replace(/^Module \d+:\s*/, '')}
                       </h4>
-                      <span className={`text-[10px] font-bold ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>
-                        {mod.lessons.length} Lessons • {mod.lessons.reduce((sum, l) => {
-                          const parts = l.duration.split(':');
-                          const min = parts.length === 2 ? parseInt(parts[0], 10) : parseInt(l.duration, 10);
-                          return sum + (isNaN(min) ? 15 : min);
-                        }, 0)} mins
-                      </span>
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
                       {isAdmin && (
@@ -698,22 +509,22 @@ export default function CourseWorkspace({ course, user, onSaveCourse, onBack, da
                             e.stopPropagation();
                             handleDeleteModule(mod.id);
                           }}
-                          className="p-1.5 rounded-lg text-slate-500 hover:text-rose-500 hover:bg-rose-500/10 transition-colors cursor-pointer"
+                          className="p-1 rounded text-slate-400 hover:text-rose-500 hover:bg-rose-500/10 transition-colors cursor-pointer"
                           title="Delete Module"
                         >
-                          <Trash2 className="w-3.5 h-3.5" />
+                          <Trash2 className="w-3 h-3" />
                         </button>
                       )}
-                      <div className={`p-1 rounded-lg ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
-                        {isExpanded ? <ChevronDown className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
+                      <div className={darkMode ? 'text-slate-500' : 'text-slate-400'}>
+                        {isExpanded ? <ChevronDown className="w-3.5 h-3.5" /> : <ChevronRight className="w-3.5 h-3.5" />}
                       </div>
                     </div>
                   </div>
 
                   {/* Accordion Body */}
                   {isExpanded && (
-                    <div className={`border-t p-3 space-y-2 ${
-                      darkMode ? 'border-slate-800/60 bg-slate-950/20' : 'border-slate-100 bg-slate-50/20'
+                    <div className={`p-2 space-y-1 ${
+                      darkMode ? 'bg-slate-955' : 'bg-slate-50/30'
                     }`}>
                       {mod.lessons.map((lesson) => {
                         const isActive = activeLesson && activeLesson.id === lesson.id;
@@ -722,46 +533,44 @@ export default function CourseWorkspace({ course, user, onSaveCourse, onBack, da
                           <div 
                             key={lesson.id}
                             onClick={() => setActiveLesson(lesson)}
-                            className={`group/item flex items-center justify-between gap-3 p-3 rounded-xl border transition-all duration-200 cursor-pointer ${
+                            className={`group/item flex items-center justify-between gap-2.5 py-1.5 px-2.5 rounded-lg border transition-all duration-200 cursor-pointer ${
                               isActive 
                                 ? darkMode 
-                                  ? 'bg-indigo-600/10 border-indigo-500/60 text-white shadow-xs'
-                                  : 'bg-indigo-50 border-indigo-200 text-indigo-905'
+                                  ? 'bg-indigo-600/10 border-indigo-500/50 text-white shadow-xs'
+                                  : 'bg-indigo-50/80 border-indigo-200 text-indigo-900 font-bold'
                                 : darkMode
-                                  ? 'bg-slate-900/40 border-slate-850 text-slate-300 hover:border-slate-700/60'
-                                  : 'bg-white border-slate-200 text-slate-700 hover:border-slate-300'
+                                  ? 'bg-transparent border-transparent text-slate-400 hover:border-slate-800'
+                                  : 'bg-transparent border-transparent text-slate-600 hover:border-slate-200'
                             }`}
                           >
-                            <div className="flex items-center gap-3 text-left flex-1 min-w-0">
+                            <div className="flex items-center gap-2 text-left flex-1 min-w-0">
                               {/* Completion Checkbox */}
                               <div 
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   handleToggleCompletion(lesson.id);
                                 }}
-                                className={`w-5 h-5 rounded-md flex items-center justify-center shrink-0 border transition-all ${
+                                className={`w-3.5 h-3.5 rounded flex items-center justify-center shrink-0 border transition-all ${
                                   isCompleted
                                     ? 'bg-emerald-500 border-emerald-500 text-white'
                                     : darkMode 
-                                      ? 'border-slate-700 bg-slate-900 hover:border-slate-500'
-                                      : 'border-slate-300 bg-white hover:border-slate-450'
+                                      ? 'border-slate-800 bg-slate-900 hover:border-slate-655'
+                                      : 'border-slate-300 bg-white hover:border-slate-400'
                                 }`}
                               >
-                                {isCompleted && <CheckCircle className="w-3.5 h-3.5 stroke-[3]" />}
+                                {isCompleted && <CheckCircle className="w-2.5 h-2.5 stroke-[3]" />}
                               </div>
 
                               <div className="min-w-0 flex-1">
-                                <p className={`text-xs font-bold leading-normal truncate ${
+                                <p className={`text-[11px] leading-normal truncate ${
                                   isActive 
-                                    ? 'text-indigo-400' 
-                                    : darkMode ? 'text-slate-200' : 'text-slate-850'
+                                    ? 'text-indigo-400 font-bold' 
+                                    : darkMode ? 'text-slate-305' : 'text-slate-700'
                                 }`}>
                                   {lesson.title}
                                 </p>
-                                <span className={`text-[10px] font-semibold flex items-center gap-1.5 mt-0.5 ${
-                                  darkMode ? 'text-slate-500' : 'text-slate-450'
-                                }`}>
-                                  <Clock className="w-3 h-3 text-slate-450" />
+                                <span className="text-[9px] text-slate-500 flex items-center gap-1 mt-0.5">
+                                  <Clock className="w-2.5 h-2.5" />
                                   {lesson.duration}
                                 </span>
                               </div>
@@ -769,8 +578,8 @@ export default function CourseWorkspace({ course, user, onSaveCourse, onBack, da
 
                             <div className="flex items-center gap-1.5 shrink-0">
                               {isActive && (
-                                <span className="inline-flex items-center gap-1 text-[9px] font-bold text-indigo-455 bg-indigo-500/10 px-2 py-0.5 rounded-full shrink-0">
-                                  <Play className="w-2.5 h-2.5 fill-indigo-500 text-indigo-500" />
+                                <span className="inline-flex items-center gap-0.5 text-[8px] font-bold text-indigo-400 bg-indigo-500/10 px-1.5 py-0.5 rounded shrink-0">
+                                  <Play className="w-2 h-2 fill-indigo-500 text-indigo-500" />
                                   Playing
                                 </span>
                               )}
@@ -781,7 +590,7 @@ export default function CourseWorkspace({ course, user, onSaveCourse, onBack, da
                                     e.stopPropagation();
                                     handleDeleteLesson(mod.id, lesson.id);
                                   }}
-                                  className="p-1 rounded-md text-slate-555 hover:text-rose-500 hover:bg-rose-500/10 transition-colors opacity-0 group-hover/item:opacity-100 cursor-pointer animate-fade-in"
+                                  className="p-1 rounded text-slate-500 hover:text-rose-500 hover:bg-rose-500/10 transition-colors opacity-0 group-hover/item:opacity-100 cursor-pointer animate-fade-in"
                                   title="Delete Lesson"
                                 >
                                   <Trash2 className="w-3 h-3" />
@@ -794,76 +603,67 @@ export default function CourseWorkspace({ course, user, onSaveCourse, onBack, da
 
                       {/* Inline Add Lesson Trigger & Form */}
                       {isAdmin && (
-                        <div className="mt-3">
+                        <div className="mt-2 px-2.5">
                           {addingLessonToModuleId === mod.id ? (
                             <form 
                               onSubmit={(e) => handleAddLessonSubmit(e, mod.id)}
-                              className={`p-3 rounded-xl border text-left space-y-3 ${
-                                darkMode ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'
+                              className={`p-2.5 rounded-lg border text-left space-y-2.5 ${
+                                darkMode ? 'bg-slate-900 border-slate-800' : 'bg-slate-50 border-slate-200'
                               }`}
                             >
-                              <div className="flex items-center justify-between border-b pb-1.5 mb-1.5 border-slate-800/40">
-                                <span className="text-[10px] font-black uppercase tracking-wider text-indigo-400">Add New Lesson</span>
+                              <div className="flex items-center justify-between border-b pb-1 border-slate-800/40">
+                                <span className="text-[9px] font-black uppercase tracking-wider text-indigo-400">Add Lesson</span>
                                 <button 
                                   type="button" 
                                   onClick={() => setAddingLessonToModuleId(null)}
-                                  className="p-0.5 rounded-md hover:bg-slate-800 text-slate-400 hover:text-slate-200 cursor-pointer"
+                                  className="p-0.5 rounded hover:bg-slate-800 text-slate-400 hover:text-slate-200 cursor-pointer"
                                 >
-                                  <X className="w-3.5 h-3.5" />
+                                  <X className="w-3 h-3" />
                                 </button>
                               </div>
 
-                              <div className="space-y-2">
-                                <div>
-                                  <label className="block text-[9px] font-black uppercase tracking-wider text-slate-400 mb-1">Lesson Title</label>
+                              <div className="space-y-1.5">
+                                <input 
+                                  type="text"
+                                  required
+                                  value={newLessonTitle}
+                                  onChange={(e) => setNewLessonTitle(e.target.value)}
+                                  placeholder="Lesson Title"
+                                  className={`w-full px-2 py-1 text-[10px] rounded border focus:outline-none focus:ring-1 focus:ring-indigo-500 ${
+                                    darkMode 
+                                      ? 'bg-slate-955 border-slate-800 text-white placeholder-slate-700' 
+                                      : 'bg-white border-slate-200 text-slate-800 placeholder-slate-400'
+                                  }`}
+                                />
+                                <div className="grid grid-cols-3 gap-1.5">
                                   <input 
                                     type="text"
-                                    required
-                                    value={newLessonTitle}
-                                    onChange={(e) => setNewLessonTitle(e.target.value)}
-                                    placeholder="e.g. 04. State Initialization"
-                                    className={`w-full px-2.5 py-1.5 text-xs rounded-lg border focus:outline-none focus:ring-1 focus:ring-indigo-500 ${
+                                    value={newLessonUrl}
+                                    onChange={(e) => setNewLessonUrl(e.target.value)}
+                                    placeholder="YouTube URL"
+                                    className={`col-span-2 w-full px-2 py-1 text-[10px] rounded border focus:outline-none focus:ring-1 focus:ring-indigo-500 ${
                                       darkMode 
-                                        ? 'bg-slate-950 border-slate-800 text-white placeholder-slate-700' 
+                                        ? 'bg-slate-955 border-slate-800 text-white placeholder-slate-700' 
                                         : 'bg-white border-slate-200 text-slate-800 placeholder-slate-400'
                                     }`}
                                   />
-                                </div>
-                                <div className="grid grid-cols-3 gap-2">
-                                  <div className="col-span-2">
-                                    <label className="block text-[9px] font-black uppercase tracking-wider text-slate-400 mb-1">YouTube URL</label>
-                                    <input 
-                                      type="text"
-                                      value={newLessonUrl}
-                                      onChange={(e) => setNewLessonUrl(e.target.value)}
-                                      placeholder="https://youtu.be/hEcjq9LVXL0"
-                                      className={`w-full px-2.5 py-1.5 text-xs rounded-lg border focus:outline-none focus:ring-1 focus:ring-indigo-500 ${
-                                        darkMode 
-                                          ? 'bg-slate-950 border-slate-800 text-white placeholder-slate-700' 
-                                          : 'bg-white border-slate-200 text-slate-800 placeholder-slate-400'
-                                      }`}
-                                    />
-                                  </div>
-                                  <div>
-                                    <label className="block text-[9px] font-black uppercase tracking-wider text-slate-400 mb-1">Duration</label>
-                                    <input 
-                                      type="text"
-                                      value={newLessonDuration}
-                                      onChange={(e) => setNewLessonDuration(e.target.value)}
-                                      placeholder="15:00"
-                                      className={`w-full px-2.5 py-1.5 text-xs rounded-lg border focus:outline-none focus:ring-1 focus:ring-indigo-500 ${
-                                        darkMode 
-                                          ? 'bg-slate-950 border-slate-800 text-white placeholder-slate-700' 
-                                          : 'bg-white border-slate-200 text-slate-800 placeholder-slate-400'
-                                      }`}
-                                    />
-                                  </div>
+                                  <input 
+                                    type="text"
+                                    value={newLessonDuration}
+                                    onChange={(e) => setNewLessonDuration(e.target.value)}
+                                    placeholder="15:00"
+                                    className={`w-full px-2 py-1 text-[10px] rounded border focus:outline-none focus:ring-1 focus:ring-indigo-500 ${
+                                      darkMode 
+                                        ? 'bg-slate-955 border-slate-800 text-white placeholder-slate-700' 
+                                        : 'bg-white border-slate-200 text-slate-800 placeholder-slate-400'
+                                    }`}
+                                  />
                                 </div>
                               </div>
 
                               <button
                                 type="submit"
-                                className="w-full py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold active:scale-[0.99] transition-all cursor-pointer"
+                                className="w-full py-1.5 rounded bg-indigo-600 hover:bg-indigo-700 text-white text-[10px] font-bold active:scale-[0.99] transition-all cursor-pointer"
                               >
                                 Save Lesson
                               </button>
@@ -876,13 +676,13 @@ export default function CourseWorkspace({ course, user, onSaveCourse, onBack, da
                                 setNewLessonUrl('');
                                 setNewLessonDuration('');
                               }}
-                              className={`w-full py-2 flex items-center justify-center gap-1.5 rounded-xl border border-dashed text-xs font-bold transition-all cursor-pointer ${
+                              className={`w-full py-1.5 flex items-center justify-center gap-1 rounded border border-dashed text-[10px] font-bold transition-all cursor-pointer ${
                                 darkMode 
-                                  ? 'border-slate-800 text-slate-400 hover:text-indigo-405 hover:border-indigo-500/40 bg-slate-900/10' 
-                                  : 'border-slate-200 text-slate-600 hover:text-indigo-650 hover:border-indigo-400 bg-slate-50/50'
+                                  ? 'border-slate-800 text-slate-450 hover:text-indigo-400 hover:border-indigo-500/40 bg-slate-900/10' 
+                                  : 'border-slate-200 text-slate-500 hover:text-indigo-650 hover:border-indigo-400 bg-slate-50/50'
                               }`}
                             >
-                              <Plus className="w-3.5 h-3.5" /> Add Lesson
+                              <Plus className="w-3 h-3" /> Add Lesson
                             </button>
                           )}
                         </div>
@@ -895,44 +695,41 @@ export default function CourseWorkspace({ course, user, onSaveCourse, onBack, da
             
             {/* Admin Add Module Form */}
             {isAdmin && (
-              <div className="mt-6 border-t border-slate-850 pt-4">
+              <div className="p-4">
                 {isAddingModule ? (
                   <form 
                     onSubmit={handleAddModuleSubmit}
-                    className={`p-4 rounded-2xl border text-left space-y-3 ${
-                      darkMode ? 'bg-slate-900/40 border-slate-800' : 'bg-white border-slate-200'
+                    className={`p-3 rounded border text-left space-y-2 ${
+                      darkMode ? 'bg-slate-900/40 border-slate-805' : 'bg-white border-slate-200'
                     }`}
                   >
-                    <div className="flex items-center justify-between border-b pb-2 mb-2 border-slate-800/45">
-                      <span className="text-xs font-black uppercase tracking-wider text-indigo-405">Create New Module</span>
+                    <div className="flex items-center justify-between border-b pb-1.5 border-slate-800/40">
+                      <span className="text-[10px] font-black uppercase tracking-wider text-indigo-405">Create Module</span>
                       <button 
                         type="button" 
                         onClick={() => setIsAddingModule(false)}
-                        className="p-0.5 rounded-md hover:bg-slate-800 text-slate-450 hover:text-slate-200 cursor-pointer"
+                        className="p-0.5 rounded hover:bg-slate-800 text-slate-400 hover:text-slate-200 cursor-pointer"
                       >
-                        <X className="w-4 h-4" />
+                        <X className="w-3.5 h-3.5" />
                       </button>
                     </div>
 
-                    <div>
-                      <label className="block text-[9px] font-black uppercase tracking-wider text-slate-455 mb-1 animate-pulse">Module Title</label>
-                      <input 
-                        type="text"
-                        required
-                        value={newModuleTitle}
-                        onChange={(e) => setNewModuleTitle(e.target.value)}
-                        placeholder="e.g. Advanced Routing & Layouts"
-                        className={`w-full px-3 py-2 text-xs rounded-xl border focus:outline-none focus:ring-1 focus:ring-indigo-500 ${
-                          darkMode 
-                            ? 'bg-slate-955 border-slate-800 text-white placeholder-slate-700' 
-                            : 'bg-white border-slate-200 text-slate-800 placeholder-slate-450'
-                        }`}
-                      />
-                    </div>
+                    <input 
+                      type="text"
+                      required
+                      value={newModuleTitle}
+                      onChange={(e) => setNewModuleTitle(e.target.value)}
+                      placeholder="Module Title"
+                      className={`w-full px-2 py-1.5 text-xs rounded border focus:outline-none focus:ring-1 focus:ring-indigo-550 ${
+                        darkMode 
+                          ? 'bg-slate-955 border-slate-800 text-white placeholder-slate-700' 
+                          : 'bg-white border-slate-200 text-slate-800 placeholder-slate-400'
+                      }`}
+                    />
 
                     <button
                       type="submit"
-                      className="w-full py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold active:scale-[0.99] transition-all cursor-pointer"
+                      className="w-full py-1.5 rounded bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold active:scale-[0.99] transition-all cursor-pointer"
                     >
                       Create Module
                     </button>
@@ -940,22 +737,87 @@ export default function CourseWorkspace({ course, user, onSaveCourse, onBack, da
                 ) : (
                   <button
                     onClick={() => setIsAddingModule(true)}
-                    className={`w-full py-3 flex items-center justify-center gap-1.5 rounded-2xl border border-dashed text-xs font-black uppercase tracking-wider transition-all cursor-pointer ${
+                    className={`w-full py-2 flex items-center justify-center gap-1 rounded border border-dashed text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer ${
                       darkMode 
-                        ? 'border-slate-800 text-slate-405 hover:text-indigo-400 hover:border-indigo-500/45 bg-slate-900/20' 
-                        : 'border-slate-200 text-slate-600 hover:text-indigo-650 hover:border-indigo-400 bg-white'
+                        ? 'border-slate-800 text-slate-400 hover:text-indigo-400 hover:border-indigo-500/40 bg-slate-900/20' 
+                        : 'border-slate-200 text-slate-655 hover:text-indigo-650 hover:border-indigo-400 bg-white'
                     }`}
                   >
-                    <Plus className="w-4 h-4" /> Create New Module
+                    <Plus className="w-3.5 h-3.5" /> Create Module
                   </button>
                 )}
               </div>
             )}
           </div>
         </div>
-
       </div>
 
+      {/* Right Side: Video Player Workspace Area */}
+      <div className="flex-1 h-full flex flex-col overflow-hidden bg-slate-950">
+        
+        {/* Top Bar Navigation */}
+        <div className="h-12 px-6 flex items-center justify-between border-b border-slate-900 bg-slate-950 text-slate-200 shrink-0 select-none">
+          <div className="flex items-center gap-3">
+            {isSidebarCollapsed ? (
+              <button
+                onClick={() => setIsSidebarCollapsed(false)}
+                className="flex items-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-white transition-colors cursor-pointer"
+                title="Expand Sidebar"
+              >
+                <ChevronsRight className="w-4 h-4 text-indigo-400" /> Back to list
+              </button>
+            ) : (
+              <span className="text-[10px] font-bold text-slate-600 uppercase tracking-widest hidden sm:inline">Active Video Session</span>
+            )}
+          </div>
+
+          {/* Centered Previous/Next navigation controls */}
+          <div className="flex items-center gap-6 text-xs font-bold text-slate-400">
+            <button
+              onClick={handlePrevLesson}
+              disabled={!prevLesson}
+              className={`hover:text-white transition-colors cursor-pointer flex items-center gap-1 disabled:opacity-30 disabled:cursor-not-allowed`}
+            >
+              &lt; previous
+            </button>
+            <span className="text-slate-800 font-normal">|</span>
+            <button
+              onClick={handleNextLesson}
+              disabled={!nextLesson}
+              className={`hover:text-white transition-colors cursor-pointer flex items-center gap-1 disabled:opacity-30 disabled:cursor-not-allowed`}
+            >
+              next &gt;
+            </button>
+          </div>
+
+          {/* User Email display on the right */}
+          <div className="text-[11px] font-semibold text-slate-500 select-none font-mono">
+            {user.email}
+          </div>
+        </div>
+
+        {/* Video Frame - occupying 100% remaining width and height */}
+        <div className="flex-1 w-full h-full bg-black relative">
+          {activeLesson ? (
+            <iframe
+              src={getEmbedUrl(activeLesson.videoUrl)}
+              title={activeLesson.title}
+              className="absolute inset-0 w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          ) : (
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-slate-900/60 text-white">
+              <Video className="w-12 h-12 text-slate-500 mb-3 animate-pulse" />
+              <h3 className="text-sm font-bold">No lesson selected</h3>
+              <p className="text-xs text-slate-550 mt-1 max-w-xs">
+                Select a lesson from the outline on the left to start learning.
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+      
     </div>
   );
 }
